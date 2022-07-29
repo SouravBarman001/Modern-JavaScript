@@ -12,7 +12,7 @@
      <p></p>
     <input type="radio" name="currency" id="usd">USD <p></p>
     <input type="radio" name="currency" id="ind">INR <p></p>
-    <input type="radio" name="currency" id="cad">Canada <p></p>
+    <input type="radio" name="currency" id="cad">Canada Dollar <p></p>
     <button type="submit" onclick="currencyConverter()">Convert</button>
     <p></p>
 
@@ -22,14 +22,18 @@
 
         function currencyConverter() {
 
-         var currency = parseInt(document.getElementById("inputValue").value);
-
+         var currency = parseInt(document.getElementById("inputValue").value); //20
+         
+         
          var usd = document.getElementById("usd");
          var inr = document.getElementById("ind");
          var cad = document.getElementById("cad");
 
          if(usd.checked) {
+            var cal = (currency / 92.00).toFixed(2);
             alert((currency / 92.00).toFixed(2) + " Dollar");
+            document.getElementById("show").innerHTML = "<p>cal</p>";
+
          }
          if(inr.checked) {
             alert((currency / 1.2).toFixed(2) + " Rupee");
@@ -37,9 +41,6 @@
          if(usd.checked) {
             alert((currency / 56).toFixed(2) + " Cad Dollar");
          }
-
-
-
         }
 
     </Script>
