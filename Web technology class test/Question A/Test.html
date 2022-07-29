@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       
+    <input type="text" name="" id="inputValue" placeholder="Please input taka">
+     <p></p>
+    <input type="radio" name="currency" id="usd">USD <p></p>
+    <input type="radio" name="currency" id="ind">INR <p></p>
+    <input type="radio" name="currency" id="cad">Canada <p></p>
+    <button type="submit" onclick="currencyConverter()">Convert</button>
+    <p></p>
+
+    <h3 id="show"></h3>
+    
+    <Script>
+
+        function currencyConverter() {
+
+         var currency = parseInt(document.getElementById("inputValue").value);
+
+         var usd = document.getElementById("usd");
+         var inr = document.getElementById("ind");
+         var cad = document.getElementById("cad");
+
+         if(usd.checked) {
+            alert((currency / 92.00).toFixed(2) + " Dollar");
+         }
+         if(inr.checked) {
+            alert((currency / 1.2).toFixed(2) + " Rupee");
+         }
+         if(usd.checked) {
+            alert((currency / 56).toFixed(2) + " Cad Dollar");
+         }
+
+
+
+        }
+
+    </Script>
+
+
+</body>
+</html>

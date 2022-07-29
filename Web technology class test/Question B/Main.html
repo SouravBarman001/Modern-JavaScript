@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+       
+    <input type="text" name="" id="inputA" placeholder="Enter 1st number">
+    <p></p>
+    <input type="text" name="" id="inputB" placeholder="Enter 2nd number">
+     <p></p>
+    <button type="button" onclick="Fib()">calculate</button>
+
+   <h2 id="result"></h2>
+
+    <script >
+
+     function Fib(){
+
+     var a = parseInt(document.getElementById("inputA").value);
+     var b = parseInt(document.getElementById("inputB").value);
+     
+   //  console.log(a);
+     //console.log(b);
+     
+    let f1 = 0;
+    let f2 = 1;
+    let f3 = 1; // 2
+    //  a = 1 , b = 10
+
+    let count = 0;
+
+    while(f1 <= b) {
+        if (f1 >= a) {
+            count++;  // 1
+        }
+
+        f1 = f2; // 1  
+        f2 = f3; // 2
+        f3 = f1 + f2; // 3
+
+        console.log(f1); // 1 
+    }
+
+    document.getElementById("result").innerHTML = count;
+     alert(count);
+
+     }
+    </script>
+
+
+
+</body>
+</html>
